@@ -66,7 +66,7 @@ USER="USERNAME"
 PASS="PASSWORD"
 HOST="HOSTNAME OR IP"
 # Path to logfile
-FILE="~innodb_log_file_size"
+FILE="innodb_log_file_size"
 # Interval between samples in seconds
 INTERVAL=60
 
