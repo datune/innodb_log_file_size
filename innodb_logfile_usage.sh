@@ -97,7 +97,7 @@ function compute
 	sum=0
 	while read line
 	do
-		current=`echo $line | grep -o -P '.{0,5}MB' | grep -o '[.0-9]*'`
+		current=`echo $line | grep -o -P '.{0,7}MB' | grep -o '[.0-9]*'`
 		sum=$(echo "scale=2; $sum+$current" | bc)
 		nbr_of_lines=$(($nbr_of_lines + 1))
 	done < $FILE	
@@ -112,7 +112,7 @@ function highest
 	current=0;
 	while read line
 	do
-		current=`echo $line | grep -o -P '.{0,5}MB' | grep -o '[.0-9]*'`
+		current=`echo $line | grep -o -P '.{0,7}MB' | grep -o '[.0-9]*'`
 		compareResult=`echo "$previous > $current" | bc`
 		if [ "$compareResult" = "1" ]
 			then
